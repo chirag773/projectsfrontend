@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PATATAPCLONE</title>
+        <script type="text/javascript" src="paper-full.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
+        <link rel="stylesheet" href="patatap.css">
+
+       <script type="text/paperscript" canvas="myCanvas">
+
+      //sounds
+
+      var keyData = {
+      a:{
+        color:"red",
+        sound: new Howl({
+            urls: ['music/bubbles.mp3']
+        })
+      },
+       b:{
+        color:"blue",
+        sound: new Howl({
+            urls: ['music/clay.mp3']
+        })
+      },
+        c:{
+        color:"green",
+        sound: new Howl({
+            urls: ['music/confetti.mp3']
+        })
+      },
+       d:{
+        color:"yellow",
+        sound: new Howl({
+            urls: ['music/corona.mp3']
+        })
+      },
+      e:{
+        color:"#709079",
+        sound: new Howl({
+            urls: ['music/dotted-spiral.mp3']
+        })
+      },
+        f:{
+        color:"#70908B",
+        sound: new Howl({
+            urls: ['music/flash-1.mp3']
+        })
+      },
+       g:{
+        color:"#897090",
+        sound: new Howl({
+            urls: ['music/flash-2.mp3']
+        })
+      },
+       h:{
+        color:"#907082",
+        sound: new Howl({
+            urls: ['music/flash-3.mp3']
+        })
+      },
+        i:{
+        color:"#908A70",
+        sound: new Howl({
+            urls: ['music/glimmer.mp3']
+        })
+      },
+       j:{
+        color:"#849070",
+        sound: new Howl({
+            urls: ['music/moon.mp3']
+        })
+      },
+       k:{
+        color:"#479D8F",
+        sound: new Howl({
+            urls: ['music/pinwheel.mp3']
+        })
+      },
+        l:{
+        color:"#6C87AA",
+        sound: new Howl({
+            urls: ['music/piston-1.mp3']
+        })
+      },
+       m:{
+        color:"#876CAA",
+        sound: new Howl({
+            urls: ['music/piston-2.mp3']
+        })
+      },
+       n:{
+        color:"#4E2584",
+        sound: new Howl({
+            urls: ['music/piston-3.mp3']
+        })
+      },
+        o:{
+        color:"#AA93C8",
+        sound: new Howl({
+            urls: ['music/prism-1.mp3']
+        })
+      },
+       p:{
+        color:"#B79BDC",
+        sound: new Howl({
+            urls: ['music/prism-2.mp3']
+        })
+      },
+       q:{
+        color:"#5F27A8",
+        sound: new Howl({
+            urls: ['music/prism-3.mp3']
+        })
+      },
+        r:{
+        color:"#A8A4AF",
+        sound: new Howl({
+            urls: ['music/splits.mp3']
+        })
+      },
+       s:{
+        color:"#065AF9",
+        sound: new Howl({
+            urls: ['music/squiggle.mp3']
+        })
+      },
+       t:{
+        color:"#8B06F9",
+        sound: new Howl({
+            urls: ['music/strike.mp3']
+        })
+      },
+        u:{
+        color:"#BA93DB",
+        sound: new Howl({
+            urls: ['music/suspension.mp3']
+        })
+      },
+       v:{
+        color:"#C96978",
+        sound: new Howl({
+            urls: ['music/timer.mp3']
+        })
+      },
+       w:{
+        color:"#69BDC9",
+        sound: new Howl({
+            urls: ['music/ufo.mp3']
+        })
+      },
+        x:{
+        color:"#698CC9",
+        sound: new Howl({
+            urls: ['music/veil.mp3']
+        })
+      },
+       y:{
+        color:"#59608A",
+        sound: new Howl({
+            urls: ['music/wipe.mp3']
+        })
+      },
+       z:{
+        color:"#FAF866",
+        sound: new Howl({
+            urls: ['music/zig-zag.mp3']
+        })
+      }
+      }
+
+       var circles = [];
+
+       function onKeyDown(event) {
+       if(keyData[event.key]){
+
+         //to make a circle at random position
+
+       var maxPoint = new Point(view.size.width, view.size.height);
+       var randomPoint = Point.random();
+       var point = maxPoint * randomPoint;
+       var newCircle = new Path.Circle(point, 500)
+       newCircle.fillColor = keyData[event.key].color;
+       keyData[event.key].sound.play();
+       circles.push(newCircle);
+    }
+       }
+
+
+
+        //animation
+
+        function onFrame(event){
+        for(var i = 0; i < circles.length; i++){
+            circles[i].fillColor.hue += 1;
+            circles[i].scale(.9);
+        }
+    }
+
+
+    </script>
+    </head>
+    <body>
+     <div class="container"><h2>Press Any Alphabet from A-Z</h2></div>
+      <canvas id="myCanvas" resize></canvas>
+
+    </body>
+</html>

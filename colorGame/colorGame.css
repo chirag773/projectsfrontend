@@ -1,0 +1,33 @@
+body{
+  background: black;
+}
+h1{
+    color: aliceblue;
+}
+.square{
+width: 30%;
+background: blue;
+padding-bottom: 30%;
+float: left;
+margin: 1.66%;
+border-radius: 30px;
+}
+#container{
+max-width: 600px;
+margin: 0 auto;
+    margin-top: 80px;
+}
+
+
+        #reset{
+                  border-color:#0A38A9;
+                  border-style: solid;
+                  border-width: 2px;
+                  border-radius: 22px;
+                  padding: 10px 40px;
+                  text-transform: uppercase;
+                  transition: all 0.2s linear;
+                  color: #0A38A9;
+                  position: absolute;
+
+              }

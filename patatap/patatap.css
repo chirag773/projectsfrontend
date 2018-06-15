@@ -1,0 +1,33 @@
+canvas{
+    height: 100%;
+    background: #2d2d2d;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+h2{
+    margin: 0 auto;
+    opacity: 0;
+    animation: appear 2s 1s ease-in;
+    
+}
+
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.container{
+    text-align: center;
+}
+
+

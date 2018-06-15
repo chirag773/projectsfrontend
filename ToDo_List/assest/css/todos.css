@@ -1,0 +1,94 @@
+#container{
+    width: 360px;
+    margin: 100px auto;
+    background: #f7f7f7;
+    
+}
+.completed{
+    color: cornflowerblue;
+    text-decoration: line-through;
+}
+h1{
+    background: blue;
+    padding: 10px 20px;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    
+}
+span{
+    background: red;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0;
+    display: inline-block;  
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+li:hover span{
+     width: 40px;
+    opacity: 1.0;
+}
+
+.fa-plus{
+    float: right;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+li{
+    background: white;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    
+}
+
+li:nth-child(2n){
+    background: #f7f7f7;
+}
+
+
+input{
+    background-color: #f7f7f7;
+    font-size: 18px;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    color: cadetblue;
+    border: 3px solid rgba(0,0,0,0); 
+    
+}
+
+input:focus{
+    background: white;
+    border: 2px solid blue;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
