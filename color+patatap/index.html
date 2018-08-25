@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.7/howler.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title></title>
+  </head>
+
+  <body>
+
+    <style>
+    body{
+      background-color: black;
+    }
+    h2{
+      color: white;
+    }
+
+  .square{
+    width: 20%;
+    background: blue;
+    padding-bottom: 20%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 30px;
+}
+  #container{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+            #reset{
+                      border-color:#0A38A9;
+                      border-style: solid;
+                      border-width: 2px;
+                      border-radius: 22px;
+                      padding: 10px 40px;
+                      text-transform: uppercase;
+                      transition: all 0.2s linear;
+                      color: #0A38A9;
+                      position: absolute;
+
+                  }
+
+                  .border-class{
+                    border:1px solid black;
+                  }
+
+
+    </style>
+    <h2 id="displayColor">choose any <span>RGB</span> color and see the magic</h2>
+      <button id="reset" type="button" name="button">RESET</button>
+      <div id="container">
+
+          <div class="square" id="square1" onclick="play()">
+            <audio id="audio" src="music/clay.mp3" ></audio>
+          </div>
+          <div class="square" id="square2" onclick="play1()">
+            <audio id="audio1" src="music/bubbles.mp3" ></audio>
+          </div>
+          <div class="square" id="square3" onclick="play2()">
+            <audio id="audio2" src="music/confetti.mp3" ></audio>
+          </div>
+          <div class="square" id="square4" onclick="play3()">
+            <audio id="audio3" src="music/flash-1.mp3" ></audio>
+          </div>
+          <div class="square" id="square5" onclick="play4()">
+            <audio id="audio4" src="music/moon.mp3" ></audio>
+          </div>
+          <div class="square" id="square6" onclick="play5()">
+            <audio id="audio5" src="music/piston-1.mp3" ></audio>
+          </div>
+          <div class="square" id="square7" onclick="play6()">
+            <audio id="audio6" src="music/prism-3.mp3" ></audio>
+          </div>
+          <div class="square" id="square8" onclick="play7()">
+            <audio id="audio7" src="music/ufo.mp3" ></audio>
+          </div>
+          <div class="square" id="square9" onclick="play8()">
+            <audio id="audio8" src="music/wipe.mp3" ></audio>
+          </div>
+          <div class="square" id="square10" onclick="play9()">
+            <audio id="audio9" src="music/strike.mp3" ></audio>
+          </div>
+          <div class="square" id="square11" onclick="play10()">
+            <audio id="audio10" src="music/veil.mp3" ></audio>
+          </div>
+          <div class="square" id="square12" onclick="play11()">
+            <audio id="audio11" src="music/pinwheel.mp3" ></audio>
+          </div>
+          <div class="square" id="square13" onclick="play12()">
+            <audio id="audio12" src="music/zig-zag.mp3" ></audio>
+          </div>
+          <div class="square" id="square14" onclick="play13()">
+            <audio id="audio13" src="music/suspension.mp3" ></audio>
+          </div>
+          <div class="square" id="square15" onclick="play14()">
+            <audio id="audio14" src="music/dotted-spiral.mp3" ></audio>
+          </div>
+          <div class="square" id="square16" onclick="play15()">
+            <audio id="audio15" src="music/timer.mp3" ></audio>
+          </div>
+
+      </div>
+
+
+      <audio>
+    	<source src="music/bubbles.mp3"></source>
+    </audio>
+
+
+<script type="text/javascript" src="touch.js">
+
+</script>
+  </body>
+</html>
